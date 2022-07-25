@@ -1,0 +1,38 @@
+/* ****** Method NumeBase ****** */
+void LossyTextCompressNB(char *input, char *outbuf, unsigned int outbuf_size);
+void LossyTextDecompressNB(char *input, char *outbuf, unsigned int outbuf_size);
+const char *INPUTBASE = "abcdefghijklmnopqrstuvwxyz0123456789.\n ";
+const char OUTPUTBASE = ' '; // start of the output base
+const int OUTPUTBASE_SIZE = 95;
+
+
+void LossyTextCompressNB(char *input, char *outbuf, unsigned int outbuf_size)
+{
+	char temp;
+	int val = 0;
+	while((temp = *(input++)) && outbuf_size)
+	{
+		for(int i = 0; *(INPUTBASE+i) != ' '; ++i)
+			if(temp == *(INPUTBASE+i))
+			{
+				val += i;
+				break;
+			}
+		if(val > OUTPUTBASE_SIZE)
+		{
+			*(outbuf++) = OUTPUTBASE + val%OUTPUTBASE_SIZE;
+			outbuf_size--;
+			val -= val%OUTPUTBASE_SIZE;
+		}
+	}
+	// finish it
+	if(outbuf_size >= 2)
+	{
+		*outbuf = OUTPUTBASE + val%OUTPUTBASE_SIZE;
+		*(outbuf+1) = 0;
+	}
+	else if(outbuf_size)
+		*outbuf = 0;
+	else
+		*(outbuf-1) = 0;
+}

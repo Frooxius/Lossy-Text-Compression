@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lossy Text Compression", "Lossy Text Compression.vcproj", "{CDB4210E-457B-4F2C-8AE0-70EEC38230A5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lossy Text Example", "..\Lossy Text Example\Lossy Text Example.vcproj", "{251AE306-45D3-4C11-BB48-31706B977B98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDB4210E-457B-4F2C-8AE0-70EEC38230A5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CDB4210E-457B-4F2C-8AE0-70EEC38230A5}.Debug|Win32.Build.0 = Debug|Win32
+		{CDB4210E-457B-4F2C-8AE0-70EEC38230A5}.Release|Win32.ActiveCfg = Release|Win32
+		{CDB4210E-457B-4F2C-8AE0-70EEC38230A5}.Release|Win32.Build.0 = Release|Win32
+		{251AE306-45D3-4C11-BB48-31706B977B98}.Debug|Win32.ActiveCfg = Debug|Win32
+		{251AE306-45D3-4C11-BB48-31706B977B98}.Debug|Win32.Build.0 = Debug|Win32
+		{251AE306-45D3-4C11-BB48-31706B977B98}.Release|Win32.ActiveCfg = Release|Win32
+		{251AE306-45D3-4C11-BB48-31706B977B98}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
