@@ -54,7 +54,7 @@ namespace LossyTextExample {
 	public: 
 
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
-	private: System::Windows::Forms::PictureBox^  pictureBox2;
+
 	private: System::Windows::Forms::Timer^  updatePosition;
 	private: System::ComponentModel::IContainer^  components;
 	protected: 
@@ -73,7 +73,7 @@ namespace LossyTextExample {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Stats::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Stats::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -82,92 +82,87 @@ namespace LossyTextExample {
 			this->BSratio = (gcnew System::Windows::Forms::Label());
 			this->ratioBar = (gcnew System::Windows::Forms::ProgressBar());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->updatePosition = (gcnew System::Windows::Forms::Timer(this->components));
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(7, 5);
+			this->label1->Location = System::Drawing::Point(10, 8);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(85, 13);
+			this->label1->Size = System::Drawing::Size(125, 20);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Plain text length:";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(7, 21);
+			this->label2->Location = System::Drawing::Point(10, 32);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(96, 13);
+			this->label2->Size = System::Drawing::Size(144, 20);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"BitSqueeze length:";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(7, 38);
+			this->label3->Location = System::Drawing::Point(10, 58);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(93, 13);
+			this->label3->Size = System::Drawing::Size(141, 20);
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"Compression ratio:";
 			// 
 			// plainLength
 			// 
-			this->plainLength->Location = System::Drawing::Point(106, 5);
+			this->plainLength->Location = System::Drawing::Point(159, 8);
+			this->plainLength->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->plainLength->Name = L"plainLength";
-			this->plainLength->Size = System::Drawing::Size(66, 14);
+			this->plainLength->Size = System::Drawing::Size(99, 22);
 			this->plainLength->TabIndex = 3;
 			this->plainLength->Text = L"0";
 			// 
 			// cBSLength
 			// 
-			this->cBSLength->Location = System::Drawing::Point(106, 21);
+			this->cBSLength->Location = System::Drawing::Point(159, 32);
+			this->cBSLength->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->cBSLength->Name = L"cBSLength";
-			this->cBSLength->Size = System::Drawing::Size(66, 14);
+			this->cBSLength->Size = System::Drawing::Size(99, 22);
 			this->cBSLength->TabIndex = 4;
 			this->cBSLength->Text = L"0";
 			// 
 			// BSratio
 			// 
-			this->BSratio->Location = System::Drawing::Point(106, 38);
+			this->BSratio->Location = System::Drawing::Point(159, 58);
+			this->BSratio->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->BSratio->Name = L"BSratio";
-			this->BSratio->Size = System::Drawing::Size(66, 14);
+			this->BSratio->Size = System::Drawing::Size(99, 22);
 			this->BSratio->TabIndex = 5;
 			this->BSratio->Text = L"0";
 			// 
 			// ratioBar
 			// 
 			this->ratioBar->Enabled = false;
-			this->ratioBar->Location = System::Drawing::Point(8, 112);
+			this->ratioBar->Location = System::Drawing::Point(14, 181);
+			this->ratioBar->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->ratioBar->Name = L"ratioBar";
-			this->ratioBar->Size = System::Drawing::Size(155, 17);
+			this->ratioBar->Size = System::Drawing::Size(232, 26);
 			this->ratioBar->TabIndex = 6;
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.BackgroundImage")));
+			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->pictureBox1->Enabled = false;
-			this->pictureBox1->Location = System::Drawing::Point(82, 56);
+			this->pictureBox1->Location = System::Drawing::Point(85, 85);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(98, 80);
+			this->pictureBox1->Size = System::Drawing::Size(99, 88);
 			this->pictureBox1->TabIndex = 7;
 			this->pictureBox1->TabStop = false;
-			// 
-			// pictureBox2
-			// 
-			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox2.BackgroundImage")));
-			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->pictureBox2->Enabled = false;
-			this->pictureBox2->Location = System::Drawing::Point(15, 59);
-			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(61, 44);
-			this->pictureBox2->TabIndex = 8;
-			this->pictureBox2->TabStop = false;
 			// 
 			// updatePosition
 			// 
@@ -177,11 +172,10 @@ namespace LossyTextExample {
 			// 
 			// Stats
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(172, 135);
+			this->ClientSize = System::Drawing::Size(258, 216);
 			this->ControlBox = false;
-			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->ratioBar);
 			this->Controls->Add(this->BSratio);
 			this->Controls->Add(this->cBSLength);
@@ -192,14 +186,14 @@ namespace LossyTextExample {
 			this->Controls->Add(this->pictureBox1);
 			this->DoubleBuffered = true;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
+			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"Stats";
 			this->ShowInTaskbar = false;
 			this->SizeGripStyle = System::Windows::Forms::SizeGripStyle::Hide;
 			this->Text = L"Info";
-			this->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &Stats::Stats_MouseMove);
 			this->MouseHover += gcnew System::EventHandler(this, &Stats::Stats_MouseHover);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->EndInit();
+			this->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &Stats::Stats_MouseMove);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

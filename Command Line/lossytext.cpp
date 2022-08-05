@@ -4,7 +4,7 @@
 	This is done simply for fun as proof of concept that
 	I can write seven letter word with six characters x3
 	Don't take this too seriously :3
-	Website: frooxius.solirax.org
+	Website: https://patreon.com/frooxius
 	E-mail: tomas.mariancik@gmail.com
   ********************************************* */
 

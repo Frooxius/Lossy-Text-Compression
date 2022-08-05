@@ -88,7 +88,7 @@ namespace LossyTextExample {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
 			this->plainText = (gcnew System::Windows::Forms::TextBox());
 			this->bitSqueeze = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -110,53 +110,58 @@ namespace LossyTextExample {
 			this->plainText->AcceptsReturn = true;
 			this->plainText->AcceptsTab = true;
 			this->plainText->AllowDrop = true;
-			this->plainText->Font = (gcnew System::Drawing::Font(L"Lucida Console", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->plainText->Font = (gcnew System::Drawing::Font(L"Lucida Console", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->plainText->Location = System::Drawing::Point(12, 23);
+			this->plainText->Location = System::Drawing::Point(18, 35);
+			this->plainText->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->plainText->MaxLength = 0;
 			this->plainText->Multiline = true;
 			this->plainText->Name = L"plainText";
 			this->plainText->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->plainText->Size = System::Drawing::Size(370, 134);
+			this->plainText->Size = System::Drawing::Size(553, 204);
 			this->plainText->TabIndex = 0;
 			this->plainText->TextChanged += gcnew System::EventHandler(this, &Form1::plainText_TextChanged);
 			// 
 			// bitSqueeze
 			// 
-			this->bitSqueeze->Font = (gcnew System::Drawing::Font(L"Lucida Console", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->bitSqueeze->Font = (gcnew System::Drawing::Font(L"Lucida Console", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->bitSqueeze->Location = System::Drawing::Point(12, 182);
+			this->bitSqueeze->Location = System::Drawing::Point(18, 280);
+			this->bitSqueeze->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->bitSqueeze->MaxLength = 0;
 			this->bitSqueeze->Multiline = true;
 			this->bitSqueeze->Name = L"bitSqueeze";
 			this->bitSqueeze->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->bitSqueeze->Size = System::Drawing::Size(370, 134);
+			this->bitSqueeze->Size = System::Drawing::Size(553, 204);
 			this->bitSqueeze->TabIndex = 1;
 			this->bitSqueeze->TextChanged += gcnew System::EventHandler(this, &Form1::bitSqueeze_TextChanged);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(9, 5);
+			this->label1->Location = System::Drawing::Point(14, 8);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(53, 13);
+			this->label1->Size = System::Drawing::Size(77, 20);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Plain text:";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(9, 163);
+			this->label2->Location = System::Drawing::Point(14, 251);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(233, 13);
+			this->label2->Size = System::Drawing::Size(352, 20);
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"Lossy Text Compression - BitSqueeze Algorithm:";
 			// 
 			// decrypt
 			// 
-			this->decrypt->Location = System::Drawing::Point(290, 158);
+			this->decrypt->Location = System::Drawing::Point(435, 243);
+			this->decrypt->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->decrypt->Name = L"decrypt";
-			this->decrypt->Size = System::Drawing::Size(92, 23);
+			this->decrypt->Size = System::Drawing::Size(138, 35);
 			this->decrypt->TabIndex = 4;
 			this->decrypt->Text = L"Decompress";
 			this->decrypt->UseVisualStyleBackColor = true;
@@ -165,9 +170,10 @@ namespace LossyTextExample {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point, 
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label3->Location = System::Drawing::Point(13, 323);
+			this->label3->Location = System::Drawing::Point(20, 497);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(217, 13);
 			this->label3->TabIndex = 5;
@@ -176,19 +182,21 @@ namespace LossyTextExample {
 			// linkLabel1
 			// 
 			this->linkLabel1->AutoSize = true;
-			this->linkLabel1->Location = System::Drawing::Point(257, 323);
+			this->linkLabel1->Location = System::Drawing::Point(366, 497);
+			this->linkLabel1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->linkLabel1->Name = L"linkLabel1";
-			this->linkLabel1->Size = System::Drawing::Size(124, 13);
+			this->linkLabel1->Size = System::Drawing::Size(205, 20);
 			this->linkLabel1->TabIndex = 6;
 			this->linkLabel1->TabStop = true;
-			this->linkLabel1->Text = L"http://frooxius.solirax.org";
+			this->linkLabel1->Text = L"https://patreon.com/frooxius";
 			this->linkLabel1->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &Form1::linkLabel1_LinkClicked);
 			// 
 			// clear
 			// 
-			this->clear->Location = System::Drawing::Point(331, 0);
+			this->clear->Location = System::Drawing::Point(496, 0);
+			this->clear->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->clear->Name = L"clear";
-			this->clear->Size = System::Drawing::Size(50, 23);
+			this->clear->Size = System::Drawing::Size(75, 35);
 			this->clear->TabIndex = 7;
 			this->clear->Text = L"Clear";
 			this->clear->UseVisualStyleBackColor = true;
@@ -196,9 +204,10 @@ namespace LossyTextExample {
 			// 
 			// copyBS
 			// 
-			this->copyBS->Location = System::Drawing::Point(228, 0);
+			this->copyBS->Location = System::Drawing::Point(342, 0);
+			this->copyBS->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->copyBS->Name = L"copyBS";
-			this->copyBS->Size = System::Drawing::Size(100, 23);
+			this->copyBS->Size = System::Drawing::Size(150, 35);
 			this->copyBS->TabIndex = 8;
 			this->copyBS->Text = L"Copy BitSqueeze";
 			this->copyBS->UseVisualStyleBackColor = true;
@@ -206,9 +215,10 @@ namespace LossyTextExample {
 			// 
 			// copyPlain
 			// 
-			this->copyPlain->Location = System::Drawing::Point(155, 0);
+			this->copyPlain->Location = System::Drawing::Point(232, 0);
+			this->copyPlain->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->copyPlain->Name = L"copyPlain";
-			this->copyPlain->Size = System::Drawing::Size(70, 23);
+			this->copyPlain->Size = System::Drawing::Size(105, 35);
 			this->copyPlain->TabIndex = 9;
 			this->copyPlain->Text = L"Copy Plain";
 			this->copyPlain->UseVisualStyleBackColor = true;
@@ -216,9 +226,10 @@ namespace LossyTextExample {
 			// 
 			// compressfile
 			// 
-			this->compressfile->Location = System::Drawing::Point(16, 341);
+			this->compressfile->Location = System::Drawing::Point(24, 525);
+			this->compressfile->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->compressfile->Name = L"compressfile";
-			this->compressfile->Size = System::Drawing::Size(100, 23);
+			this->compressfile->Size = System::Drawing::Size(150, 35);
 			this->compressfile->TabIndex = 10;
 			this->compressfile->Text = L"Compress file";
 			this->compressfile->UseVisualStyleBackColor = true;
@@ -226,9 +237,10 @@ namespace LossyTextExample {
 			// 
 			// decompressfile
 			// 
-			this->decompressfile->Location = System::Drawing::Point(122, 341);
+			this->decompressfile->Location = System::Drawing::Point(183, 525);
+			this->decompressfile->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->decompressfile->Name = L"decompressfile";
-			this->decompressfile->Size = System::Drawing::Size(99, 23);
+			this->decompressfile->Size = System::Drawing::Size(148, 35);
 			this->decompressfile->TabIndex = 11;
 			this->decompressfile->Text = L"Decompress file";
 			this->decompressfile->UseVisualStyleBackColor = true;
@@ -239,10 +251,10 @@ namespace LossyTextExample {
 			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
-			this->ClientSize = System::Drawing::Size(394, 371);
+			this->ClientSize = System::Drawing::Size(591, 571);
 			this->Controls->Add(this->decompressfile);
 			this->Controls->Add(this->compressfile);
 			this->Controls->Add(this->copyPlain);
@@ -256,7 +268,8 @@ namespace LossyTextExample {
 			this->Controls->Add(this->bitSqueeze);
 			this->Controls->Add(this->plainText);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
-			this->Icon = (cli::safe_cast<System::Drawing::Icon^  >(resources->GetObject(L"$this.Icon")));
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->MaximizeBox = false;
 			this->Name = L"Form1";
 			this->SizeGripStyle = System::Windows::Forms::SizeGripStyle::Hide;
@@ -343,7 +356,7 @@ private: System::Void decrypt_Click(System::Object^  sender, System::EventArgs^ 
 			 bitSqueeze_TextChanged(sender, e);
 		 }
 private: System::Void linkLabel1_LinkClicked(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) {
-			 System::Diagnostics::Process::Start("http://frooxius.solirax.org");
+			 System::Diagnostics::Process::Start("https://patreon.com/frooxius");
 		 }
 private: System::Void copyPlain_Click(System::Object^  sender, System::EventArgs^  e) {
 			 if(this->plainText->Text->Length == 0)
